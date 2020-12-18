@@ -1,3 +1,5 @@
+//solution1
+
 class Solution {
 public:
     string restoreString(string s, vector<int>& indices) {
@@ -14,6 +16,21 @@ public:
                     res[i] = s[j];
                 }
             }
+        }
+        return res;
+    }
+};
+
+
+//solution2
+
+class Solution {
+public:
+    string restoreString(string s, vector<int>& indices) {
+        string res = s;
+     
+        for(int i = 0; i < s.size(); i++){
+            res[indices[i]] = s[i];
         }
         return res;
     }
