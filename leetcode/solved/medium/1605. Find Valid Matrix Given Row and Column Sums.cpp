@@ -1,3 +1,6 @@
+//got idea from
+//https://leetcode.com/problems/find-valid-matrix-given-row-and-column-sums/discuss/887633/C%2B%2B-clean-code-and-easy-to-understand.
+
 class Solution {
 public:
 
