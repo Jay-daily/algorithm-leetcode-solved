@@ -20,21 +20,15 @@ public:
                     else{
                         m.insert(make_pair(domainTmp, numStrToInt));
                     }
-                    
-                    
                 }
                 domainTmp = cpdomains[i][k] + domainTmp;
-                
                 if(isdigit(cpdomains[i][k])) break;
             }
         }
         
         for (auto &it : m){
             string tmp = "";
-            string add = to_string(it.second);
-            tmp += add;
-            tmp += " ";
-            tmp += it.first;
+            tmp = to_string(it.second) + " " + it.first;
             res.push_back(tmp);
         }
         return res;
