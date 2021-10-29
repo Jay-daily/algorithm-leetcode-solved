@@ -1,3 +1,5 @@
+//2021 Jan
+
 class Solution {
 public:
 	static bool mycomp(vector<int> &a,vector<int> &b){
@@ -22,4 +24,28 @@ public:
 
 		return ans;
 	}
+};
+
+
+
+
+//2021 Oct
+
+class Solution {
+public:
+    
+    int maximumUnits(vector<vector<int>>& boxTypes, int truckSize) {
+        sort(boxTypes.begin(),boxTypes.end(),[] (const auto &l, const auto &r) {return l[1] > r[1];});
+        int res=0;
+        for(int i =0; i<boxTypes.size(); i++){
+            while(1){
+                truckSize--;
+                boxTypes[i][0]--;
+                res+=boxTypes[i][1];
+                if(truckSize==0) return res;
+                if(boxTypes[i][0]==0) break;
+            }
+        }
+        return res;
+    }
 };
