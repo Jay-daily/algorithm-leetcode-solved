@@ -1,1 +1,2 @@
-Solving algorithm problems
+- Solutions to problems solved from various problem-solving websites
+- Learning and practice code for data structures and algorithms
